@@ -818,7 +818,7 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
     script.Comment("Stage 3/3")
 
   # Dump fingerprints
-  script.Print("Target: {}".format(target_info.fingerprint))
+  #script.Print("Target: {}".format(target_info.fingerprint))
 
   is_system_as_root = target_info.get("system_root_image") == "true"
   if is_system_as_root and not common.system_as_system:
@@ -830,13 +830,13 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
 
   android_version = target_info.GetBuildProp("ro.build.version.release")
   build_id = target_info.GetBuildProp("ro.build.id")
-  build_date = target_info.GetBuildProp("org.pixelexperience.build_date")
+  build_date = target_info.GetBuildProp("ro.lotus.build_date")
   security_patch = target_info.GetBuildProp("ro.build.version.security_patch")
-  device = target_info.GetBuildProp("org.pixelexperience.device")
+  device = target_info.GetBuildProp("ro.lotus.device")
 
   script.Print("----------------------------------------------");
-  script.Print("              Pixel Experience");
-  script.Print("               by jhenrique09");
+  script.Print("              LotusOS");
+  script.Print("               by hungphan2001");
   script.Print("----------------------------------------------");
   script.Print(" Android version: %s"%(android_version));
   script.Print(" Build id: %s"%(build_id));
@@ -869,6 +869,9 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
     system_progress -= 0.1
   if HasVendorPartition(input_zip):
     system_progress -= 0.1
+	
+  model = target_info.GetBuildProp("ro.product.model")
+  build = target_info.GetBuildProp("ro.build.date")
 
   script.ShowProgress(system_progress, 0)
 
