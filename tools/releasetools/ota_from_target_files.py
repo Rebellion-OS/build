@@ -834,16 +834,22 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   security_patch = target_info.GetBuildProp("ro.build.version.security_patch")
   device = target_info.GetBuildProp("ro.lotus.device")
 
-  script.Print("----------------------------------------------");
-  script.Print("              LotusOS");
-  script.Print("               by hungphan2001");
-  script.Print("----------------------------------------------");
+  script.Print("----------------------------------------------")
+  script.Print("    __           __        _____         ____ ")
+  script.Print("   / /    ___ __/ /_ _  __/ ___/    ____/ __/ ")
+  script.Print("  / /    / __ \/ __/ / / /\__ \ _  / __ \__ \ ")
+  script.Print(" / /___ / /_/ / /_/ /_/ /___/ /|_|/ /_/ /___/ ")
+  script.Print("/______/\____/\__/\__,_//____/    \____/      ")
+  script.Print("                                              ")
+  script.Print("       -------Feel the beauty-------          ")
+  script.Print("            /By:@hungphan2001/                ")
+  script.Print("----------------------------------------------")
   script.Print(" Android version: %s"%(android_version));
   script.Print(" Build id: %s"%(build_id));
   script.Print(" Build date: %s"%(build_date));
   script.Print(" Security patch: %s"%(security_patch));
   script.Print(" Device: %s"%(device));
-  script.Print("----------------------------------------------");
+  script.Print("---------------------------------------------");
   device_specific.FullOTA_InstallBegin()
 
   CopyInstallTools(output_zip)

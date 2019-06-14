@@ -62,6 +62,6 @@ if [ -n "$BUILD_THUMBPRINT" ] ; then
 fi
 echo "ro.build.characteristics=$TARGET_AAPT_CHARACTERISTICS"
 
-echo "ro.lotus.device=$CUSTOM_DEVICE"
+echo "ro.lotus.device=$LOTUS_DEVICE"
 
 echo "# end build properties"
