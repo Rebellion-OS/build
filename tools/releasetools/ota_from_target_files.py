@@ -830,21 +830,22 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
 
   android_version = target_info.GetBuildProp("ro.build.version.release")
   build_id = target_info.GetBuildProp("ro.build.id")
-  build_date = target_info.GetBuildProp("ro.lotus.build_date")
+  build_date = target_info.GetBuildProp("ro.rebellion.build_date")
   security_patch = target_info.GetBuildProp("ro.build.version.security_patch")
-  device = target_info.GetBuildProp("ro.lotus.device")
+  device = target_info.GetBuildProp("ro.rebellion.device")
+  rom_verson = target_info.GetBuildProp("ro.rebellion.version")
 
   script.Print("----------------------------------------------")
-  script.Print("    __           __        _____         ____ ")
-  script.Print("   / /    ___ __/ /_ _  __/ ___/    ____/ __/ ")
-  script.Print("  / /    / __ \/ __/ / / /\__ \ _  / __ \__ \ ")
-  script.Print(" / /___ / /_/ / /_/ /_/ /___/ /|_|/ /_/ /___/ ")
-  script.Print("/______/\____/\__/\__,_//____/    \____/      ")
-  script.Print("                                              ")
-  script.Print("       -------Feel the beauty-------          ")
-  script.Print("            /By:@hungphan2001/                ")
+  script.Print("            ___   ____  _____ ____  ____      ")
+  script.Print("           /   | / __ \/ ___// __ \/ __ \     ")
+  script.Print("          / /| |/ / / /\__ \/ /_/ / /_/ /     ")
+  script.Print("         / ___ / /_/ /___/ / _, _/ ____/      ")
+  script.Print("        /_/  |_\____//____/_/ |_/_/           ")
+  script.Print("          -------GetRebellized-------         ")
+  script.Print("              /By:RebellionTeam/              ")
   script.Print("----------------------------------------------")
   script.Print(" Android version: %s"%(android_version));
+  script.Print(" Rebellion version: %s"%(rom_version));
   script.Print(" Build id: %s"%(build_id));
   script.Print(" Build date: %s"%(build_date));
   script.Print(" Security patch: %s"%(security_patch));
