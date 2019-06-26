@@ -833,7 +833,7 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   build_date = target_info.GetBuildProp("ro.rebellion.build_date")
   security_patch = target_info.GetBuildProp("ro.build.version.security_patch")
   device = target_info.GetBuildProp("ro.rebellion.device")
-  rom_verson = target_info.GetBuildProp("ro.rebellion.version")
+  rom_version = target_info.GetBuildProp("ro.rebellion.version")
 
   script.Print("----------------------------------------------")
   script.Print("            ___   ____  _____ ____  ____      ")
